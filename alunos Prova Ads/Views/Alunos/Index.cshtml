@@ -1,0 +1,52 @@
+﻿@model IEnumerable<alunos_Prova_Ads.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listagem</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.curso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomeFaculdade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.curso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeFaculdade)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
